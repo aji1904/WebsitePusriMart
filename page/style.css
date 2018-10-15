@@ -7,7 +7,6 @@ body {margin: 0px; padding: 0px;}
 .daftar {border-radius: 5px; padding: 5px; width: 80px; background-color: white; border: none; cursor: pointer; position: absolute; left: 1250px; top: 13px;}
 .icon {background-color: white; padding: 11px; margin: 0px;}
 .cari {background-color: transparent; border: none; cursor: pointer; padding: 0px;}
-
 ul {list-style-type: none; margin: 0; padding: 0;}
 li {padding: 3px 0px;}
 a {text-decoration: none; }
@@ -18,7 +17,6 @@ a {text-decoration: none; }
 #list, #list-inovasi, #list-urea, #list-amonia, #list-npk {background-color: transparent; border:none; font-size: 15px; float: right!important;}
 .space {padding: 5px;}
 .right {position: absolute; top: 95px; left: 360px; width: 71%;}
-
 .provinsi {border-radius: 3px; width: 200px;}
 .button {border: none; padding: 5px 5px; color: white; background-color: transparent;}
 .dropdown-space {margin: auto 50px;}
@@ -31,10 +29,18 @@ a {text-decoration: none; }
 .container-text {width: 100%; height: 65px;}
 .card-daftar {width: 450px; border-radius: 10px; padding-bottom: 10px; position: absolute;top: 29%;left: 50%;margin-top:-100px;margin-left:-225px;box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);}
 .product {width: 30%;margin: 30px;}
-
-
-
-
+.garis-hr {border: 1px solid green; margin: 5px 0px; width: 100%;}
+.group-detail {height: auto; margin: 15px 0px;}
+.group-form {padding: 15px; background-color: #e0e0e0;}
+.row-detail {background-color: white; padding: 20px;}
+#image-detail {border: 1px solid green; border-radius: 5px; width: 270px; height: 270px;background-color: white;}
+.image-size {height: auto; max-width: 330px;}
+.margin-half{margin-left: 50px;}
+.font-title {font-size: 25px; padding-bottom: 15px;}
+.font-harga {font-size: 25px; padding-bottom: 15px; color: red;}
+.beli-now {border: none; padding: 10px 20px; background-color: orange; border-radius: 5px; margin: 20px 0px;}
+.button-detail {border: none; padding: 10px 15px; margin-bottom: 10px; margin-right: 20px; background-color: orange; border-radius: 5px;}
+.detail-produk {margin-top: 50px; background-color: white; padding: 20px;}
 
 
 

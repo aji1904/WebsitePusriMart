@@ -6,7 +6,7 @@
 	 		<div class="right">
 	 			<div>
 	 				NPK-Fusion Produk
-	 				<hr style="border: 1px solid green; margin: 5px 0px; width: 100%;">
+	 				<hr class="garis-hr">
 	 				<div class="w3-row-padding" style="margin: 20px 0px;">
 	 					<div class="w3-quarter">
 	 						<div class="w3-card w3-container w3-margin-bottom w3-round w3-green" style="padding: 0px;">
