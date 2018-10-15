@@ -1,3 +1,4 @@
+scripts
 Dockerfile
 docker-compose.yml
 .dockerignore
