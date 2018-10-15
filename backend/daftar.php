@@ -9,8 +9,9 @@ $email = $_POST['email'];
 $lahir = $_POST['lahir'];
 $no_hp = $_POST['no_hp'];
 $gender = $_POST['gender'];
+$md5Pass = md5($password);
 
-$sqlQuery = "insert into user values ($username,$name,$email,$password,$lahir,$no_hp,$gender)";
+$sqlQuery = "insert into user values ($username,$name,$email,$md5Pass,$lahir,$no_hp,$gender)";
 $qInsert = mysqli_query($koneksi,$sqlQuery);
 
 if($qInsert) {
