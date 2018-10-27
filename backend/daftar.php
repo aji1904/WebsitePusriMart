@@ -12,7 +12,7 @@ $lahir = $_POST['lahir'];
 $gender = $_POST['gender'];
 $md5Pass = md5($password);
 
-$sqlQuery = "insert into user values ($username,$name,$email,$md5Pass,$lahir,$no_hp,$gender)";
+$sqlQuery = "insert into user values ('$username','$name','$email','$md5Pass','$lahir','$no_hp','$gender')";
 $qInsert = mysqli_query($koneksi,$sqlQuery);
 
 if($qInsert) {
@@ -20,7 +20,7 @@ if($qInsert) {
     die();
 } 
 
-echo "Gagal insert data <br/>";
+echo "Gagal insert data <br/>" . mysqli_error($koneksi);
 
 
 

@@ -17,12 +17,31 @@
 			      <a href="#" class="w3-bar-item w3-button">Provinsi Sumatera Utara</a>
 			      <a href="#" class="w3-bar-item w3-button">Provinsi Sumatera Selatan</a>
 			    </div>
-			  </div>
-				<a href="./login.php">
-					<button class="login">Login</button>
-				</a>
-		 		<a href="./daftar.php">
-		 			<button class="daftar">Daftar</button>
-		 		</a>
+				</div>
+				
+				<?php
+						if (isset($_SESSION['username'])) {
+							$sUsername = $_SESSION['username'];
+							echo(
+								"<div>
+										<div>Login sebagai $sUsername</div>
+										<div>
+											<a href='/WebsitePusriMart/backend/logout.php'>Logout</a>
+										</div>
+								</div>"
+							);
+						} else {
+							echo(
+								"
+								<a href='./login.php'>
+									<button class='login'>Login</button>
+								</a>
+								 
+								<a href='./daftar.php'>
+								 	<button class='daftar'>Daftar</button>
+							 	</a>"
+							);
+						}
+				?>
 
 	 	</div>

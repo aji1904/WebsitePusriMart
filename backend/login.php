@@ -13,7 +13,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 $md5Pass = md5($password);
 
-$sqlSelect = "select * from user where username = $username and password = $md5Pass";
+$sqlSelect = "select * from user where username = '$username' and password = '$md5Pass' ";
 $qSelect = mysqli_query($koneksi , $sqlSelect);
 $numRows = mysqli_num_rows($qSelect);
 
