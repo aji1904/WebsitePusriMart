@@ -6,7 +6,7 @@
 	 		<div class="right">
 	 			<div>
 	 				Semua Produk
-	 				<hr style="border: 1px solid green; margin: 5px 0px; width: 100%;">
+	 				<hr class="garis-hr">
 	 				<div class="w3-row-padding" style="margin: 20px 0px;">
 	 					<div class="w3-quarter">
 	 						<a href="#">

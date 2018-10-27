@@ -8,6 +8,7 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $lahir = $_POST['lahir'];
 $no_hp = $_POST['no_hp'];
+$lahir = $_POST['lahir'];
 $gender = $_POST['gender'];
 $md5Pass = md5($password);
 
