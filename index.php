@@ -1,3 +1,4 @@
+<?php session_start();?>
 <?php include './page/header.php'; ?>
 <?php include './page/navbar.php'; ?>
 <?php include './page/left.php'; ?>
