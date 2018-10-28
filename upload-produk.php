@@ -14,17 +14,46 @@
 					<input class="w3-input daftar-input" type="text" name="name" required placeholder="Harga Produk"> 
 					<input class="w3-input daftar-input" type="text" name="no_hp" required placeholder="Banyak Produk">
 					<div class="padding-select">
-						<select class="style-select">
+						<select class="style-select" size="5">
 							<option selected>-- Pilih Provinsi Anda --</option>
-							<option>Sumatera Selatan</option>
+						    <option>Aceh</option>
+						    <option>Bali</option>
+						    <option>Banten</option>
+						    <option>Bengkulu</option>
+						    <option>Gorontalo</option>
+						    <option>Jakarta</option>
+						    <option>Jambi</option>
+						    <option>Jawa Barat</option>
+						    <option>Jawa Tengah
+						    <option>Jawa Timur</option>
+						    <option>Kalimantan Barat</option>
+						    <option>Kalimantan Selatan</option>
+						    <option>Kalimantan Tengah</option>
+						    <option>Kalimantan Timur</option>
+						    <option>Kalimantan Utara</option>
+						    <option>Kepulauan Bangka Belitung</option>
+						    <option>Kepulauan Riau</option>
+						    <option>Lampung</option>
+						    <option>Maluku </option>
+						    <option>Maluku Utara</option>
+						    <option>Nusa Tenggara Timur</option>
+						    <option>Nusa Tenggara Barat</option>
+						    <option>Papua</option>
+						    <option>Papua Barat</option>
+						    <option>Riau</option>
+						    <option>Sulawesi Barat</option>
+						    <option>Sulawesi Selatan</option>
+						    <option>Sulawesi Tengah</option>
+						    <option>Sulawesi Tenggara</option>
+						    <option>Sulawesi Utara</option>
+						    <option>Sumatera Barat</option>
+						    <option>Sumatera Selatan</option>
+						    <option>Sumatera Utara</option>
+						    <option>Yogyakarta</option>
 						</select>
 					</div>
 					<div class="padding-select">
-						<select class="style-select">
-							<option selected>-- Pilih Kabupaten/Kota Anda --</option>
-							<option>Palembang</option>
-							<option>Muara Enim</option>
-						</select>
+						<input class="w3-input daftar-input" type="text" name="kota/kabupaten" required placeholder="Kota/Kabupaten"> 
 					</div>
 					
 					<label>Deskripsi Barang Anda</label>

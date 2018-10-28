@@ -17,7 +17,7 @@
 			      <a href="#" class="w3-bar-item w3-button">Provinsi Sumatera Utara</a>
 			      <a href="#" class="w3-bar-item w3-button">Provinsi Sumatera Selatan</a>
 			    </div>
-			  </div>
+			</div>
 				<a href="./login.php">
 					<button class="login">Login</button>
 				</a>
