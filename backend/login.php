@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 require_once 'koneksi.php';
 session_start();
 
@@ -21,9 +22,8 @@ if($numRows == 1) {
     $_SESSION['username'] = $username;
     header("Location: /WebsitePusriMart/");
     die();
-} 
-
-echo(
+} else
+echo(	
     "<div>
         Username atau password salah, <a href='/WebsitePusriMart/login.php'>Login lagi</a>
     </div>"

@@ -16,7 +16,7 @@ $sqlQuery = "insert into user values ('$username','$name','$email','$md5Pass','$
 $qInsert = mysqli_query($koneksi,$sqlQuery);
 
 if($qInsert) {
-    header("Location: /WebsitePusriMart/daftar.php");
+    header("Location: /WebsitePusriMart/login.php");
     die();
 } 
 

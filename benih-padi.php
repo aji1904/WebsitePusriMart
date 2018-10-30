@@ -6,14 +6,14 @@
 <?php
 require_once "./backend/koneksi.php";
 
-$select = "select * from produk where kategori = 'npk-fusion' ";
+$select = "select * from produk where jenis_produk = 'benih-padi' ";
 $query = mysqli_query($koneksi, $select);
 ?>
 
 	 		</div>
 	 		<div class="right">
 	 			<div>
-	 				Produk NPK-Fusion
+	 				Produk Inovasi
 	 				<hr class="garis-hr">
 	 				<div class="w3-row-padding" style="margin: 20px 0px;">
 	 				<?php 

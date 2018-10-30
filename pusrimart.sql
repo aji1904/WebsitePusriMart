@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 15, 2018 at 06:52 AM
+-- Generation Time: Oct 30, 2018 at 08:50 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -33,6 +33,8 @@ CREATE TABLE `produk` (
   `harga` int(50) NOT NULL COMMENT 'harga',
   `jmlh_produk` int(50) NOT NULL COMMENT 'jumlah produk',
   `desc_produk` text NOT NULL COMMENT 'deskripsi produk',
+  `kategori` varchar(40) NOT NULL COMMENT 'kategori produk',
+  `jenis_produk` varchar(40) NOT NULL COMMENT 'jenis produk',
   `provinsi` varchar(50) NOT NULL COMMENT 'provinsi',
   `kabupaten_kota` varchar(50) NOT NULL COMMENT 'kabupaten/kota'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

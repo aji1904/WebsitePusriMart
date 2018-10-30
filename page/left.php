@@ -10,8 +10,8 @@
 	 					</a>
 	 					<button id="list"><i class="fa fa-angle-down"></i></button>
 	 					<ul class="list">
-	 						<li><a href="retailurea.php">UREA PUSRI Retail</a></li>
-	 						<li><a href="retailnpk.php">NPK PUSRI Retail</a></li>
+	 						<li><a href="urea-retail.php">UREA PUSRI Retail</a></li>
+	 						<li><a href="npk-retail.php">NPK PUSRI Retail</a></li>
 	 					</ul>
 	 				</li>
 	 				<li class="space"><a href="inovasi.php">
@@ -19,7 +19,7 @@
 	 				</a>
 	 					<button id="list-inovasi"><i class="fa fa-angle-down"></i></button>
 	 					<ul class="list-inovasi">
-	 						<li>Benih Padi PUSRI SEED</li>
+	 						<li><a href="benih-padi.php">Benih Padi PUSRI SEED</a></li>
 	 						<li>Benih Cabai PUSRI SEED</li>
 	 						<li>Benih Jagung Hibrida PUSRI SEED</li>
 	 						<li>Dekomposer Cair SRIDEK</li>

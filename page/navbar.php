@@ -18,31 +18,32 @@
 			      <a href="#" class="w3-bar-item w3-button">Provinsi Sumatera Selatan</a>
 			    </div>
 			</div>
-		</div>
-		<div>
+			<div>
+
 			<?php
-						if (isset($_SESSION['username'])) {
-							$sUsername = $_SESSION['username'];
-							echo(
-								"<div>
-										<div>Login sebagai $sUsername</div>
-										<div>
-											<a href='/WebsitePusriMart/backend/logout.php'>Logout</a>
-										</div>
-								</div>"
-							);
-						} else {
-							echo(
-								"
-								<a href='./login.php'>
-									<button class='login'>Login</button>
-								</a>
-								 
-								<a href='./daftar.php'>
-								 	<button class='daftar'>Daftar</button>
-							 	</a>"
-							);
-						}
+				if (isset($_SESSION['username'])) {
+					$sUsername = $_SESSION['username'];
+					echo(
+						"<div style='position: absolute; top: 10px; left: 1060px;'>
+							<font class='w3-btn w3-orange w3-round' style='overflow:hidden; margin-right: 10px; width:100px;'>$sUsername</font>
+
+							<a href='/WebsitePusriMart/backend/logout.php' class='w3-btn w3-orange w3-round' style='margin-right: 5px;'>Logout</a>
+							<a href='/WebsitePusriMart/option-produk.php' class='w3-btn w3-orange w3-round'><i class='fa fa-shopping-cart'></i></a>
+						</div>"
+					);
+				} else {
+					echo(
+						"
+						<a href='./login.php'>
+							<button class='login'>Login</button>
+						</a>
+						 
+						<a href='./daftar.php'>
+						 	<button class='daftar'>Daftar</button>
+					 	</a>"
+					);
+				}
 				?>
+		</div>
 		</div>
  	</div>

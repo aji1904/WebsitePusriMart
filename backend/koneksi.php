@@ -1,4 +1,4 @@
 <?php
-$koneksi = mysqli_connect("pusri-db","root","","pusrimart");
+$koneksi = mysqli_connect("localhost","root","","pusrimart");
 
 

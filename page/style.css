@@ -1,9 +1,9 @@
 * {font-family: Segoe UI;}
 body {margin: 0px; padding: 0px;}
 
-#navbar {width: 100%; background-color: #4CAF50; height: auto; padding: 10px;}
+#navbar {width: 100%; background-color: #4CAF50; height: auto; padding: 10px; position: fixed; z-index: 9999; }
 .logo {font-size: 20px; color: white; padding: 0px 20px 0px 20px; }
-.search {border: none; padding: 7px 15px; border-radius: 5px 0px 0px 5px; width: 520px; margin-left: 50px; }
+.search {border: none; padding: 7px 15px; border-radius: 5px 0px 0px 5px; width: 520px; margin-left: 25px; }
 .login {border-radius: 5px; padding: 5px; width: 80px; background-color: white; border: none; cursor: pointer; position: absolute; left: 1150px; top: 13px;}
 .daftar {border-radius: 5px; padding: 5px; width: 80px; background-color: white; border: none; cursor: pointer; position: absolute; left: 1250px; top: 13px;}
 .icon {background-color: white; padding: 11px; margin: 0px;}
@@ -11,23 +11,23 @@ body {margin: 0px; padding: 0px;}
 ul {list-style-type: none; margin: 0; padding: 0;}
 li {padding: 3px 0px;}
 a {text-decoration: none; }
-#content {padding: 30px 30px; width: 100%;}
-.left {border: 1px solid #e0e0e0 ; width: 23%; border-radius: 5px; padding: 20px; box-shadow: 0 0 10px 0 rgba(0,0,0,.1) !important;}
+#content {padding: 20px 25px 30px 25px; width: 100%;}
+.left {border: 1px solid #e0e0e0 ; width: 23%; border-radius: 5px; padding: 20px; box-shadow: 0 0 10px 0 rgba(0,0,0,.1) !important; margin-top: 58px;}
 .list, .list-inovasi, .list-urea, .list-amonia, .list-npk {padding: 5px 10px;}
 .kategori {margin: 10px 0px;}
 #list, #list-inovasi, #list-urea, #list-amonia, #list-npk {background-color: transparent; border:none; font-size: 15px; float: right!important;}
 .space {padding: 5px;}
-.right {position: absolute; top: 95px; left: 360px; width: 71%;}
+.right {position: absolute; top: 85px; left: 360px; width: 71%;}
 .provinsi {border-radius: 3px; width: 200px;}
 .button {border: none; padding: 5px 5px; color: white; background-color: transparent;}
-.dropdown-space {margin: auto 50px;}
+.dropdown-space {margin: auto 25px;}
 .space-dropdown {margin-left: 15px;}
 .card {background-color: white; color: black; padding: 10px 5px 5px 10px; max-height: 127px; height: 127px;}
 .position-image {max-width: 200px; max-height: 200px; display: block; margin: auto; }
 .size-image {width: auto; height: 200px;}
 .height-card {height: 327px; max-height: 327px;}
 .font-height {max-height: 65px; height: 65px;}
-.container-text {width: 100%; height: 65px;}
+.container-text {width: 100%; height: 45px;}
 .card-daftar {width: 50%; border-radius: 10px; padding-bottom: 10px; box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19); margin: 50px auto; }
 .product {width: 30%;margin: 30px;}
 .garis-hr {border: 1px solid green; margin: 5px 0px; width: 100%;}
