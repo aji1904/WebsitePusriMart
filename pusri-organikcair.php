@@ -6,7 +6,7 @@
 <?php
 require_once "./backend/koneksi.php";
 
-$select = "select * from produk where jenis_produk = 'urea-retail' ";
+$select = "select * from produk where jenis_produk = 'pusri-organikcair' ";
 $query = mysqli_query($koneksi, $select);
 ?>
 
