@@ -1,10 +1,10 @@
 <?php session_start();?>
-<?php include './page/header.php'; ?>
-<?php include './page/navbar.php'; ?>
-<?php include './page/left.php'; ?>
+<?php include 'header.php'; ?>
+<?php include 'navbar.php'; ?>
+<?php include 'left.php'; ?>
 
 <?php
-require_once "./backend/koneksi.php";
+require_once "backend/koneksi.php";
 
 $select = "select * from produk where jenis_produk = 'amonia' ";
 $query = mysqli_query($koneksi, $select);

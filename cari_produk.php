@@ -4,16 +4,21 @@
 <?php include './page/left.php'; ?>
 
 <?php
-require_once "./backend/koneksi.php";
+include './backend/koneksi.php';
 
-$select = "select * from produk ";
-$query = mysqli_query($koneksi, $select);
+$string = $_POST['search'];
+$PecahStr = (explode(" ", $string));
+$perkata = "%".implode("% %", $PecahStr)."%";
+
+$select_produk = "SELECT * FROM produk WHERE nama_produk LIKE '$perkata' ";
+$query = mysqli_query($koneksi, $select_produk);
+
 ?>
 
 	 		</div>
 	 		<div class="right">
 	 			<div>
-	 				Produk Amonia
+	 				Produk Inovasi
 	 				<hr class="garis-hr">
 	 				<div class="w3-row-padding" style="margin: 20px 0px;">
 	 				<?php 
