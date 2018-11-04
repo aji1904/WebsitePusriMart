@@ -42,7 +42,7 @@
 	 					<a href="amonia.php">Amonia</a>
 	 					<button id="list-amonia"><i class="fa fa-angle-down"></i></button>
 	 					<ul class="list-amonia">
-	 						<li<a href="amonia-normal.php">Amonia</a></li>
+	 						<li><a href="amonia-normal.php">Amonia</a></li>
 	 					</ul>
 	 				</li>
 	 				<li class="space">

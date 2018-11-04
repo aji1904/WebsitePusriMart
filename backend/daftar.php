@@ -18,9 +18,8 @@ $qInsert = mysqli_query($koneksi,$sqlQuery);
 if($qInsert) {
     header("Location: /WebsitePusriMart/login.php");
     die();
-} 
-
-echo "Gagal insert data <br/>" . mysqli_error($koneksi);
+}else 
+echo "USERNAME OR EMAIL ANDA SUDAH DI PAKAI";
 
 
 

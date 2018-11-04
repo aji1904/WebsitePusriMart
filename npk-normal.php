@@ -13,7 +13,7 @@ $query = mysqli_query($koneksi, $select);
 	 		</div>
 	 		<div class="right">
 	 			<div>
-	 				Produk Inovasi
+	 				Semua Produk Pupuk NPK
 	 				<hr class="garis-hr">
 	 				<div class="w3-row-padding" style="margin: 20px 0px;">
 	 				<?php 

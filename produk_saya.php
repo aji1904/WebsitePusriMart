@@ -4,18 +4,23 @@
 <?php include './page/left.php'; ?>
 
 <?php
-require_once "backend/koneksi.php";
+require_once "./backend/koneksi.php";
+$Susername = $_SESSION['username'];
 
-$select = "select * from produk where jenis_produk = 'amonia' ";
+$select = "select * from produk where username = '$Susername' ";
 $query = mysqli_query($koneksi, $select);
+$numrows = mysqli_num_rows($query);
 ?>
-
-	 		</div>
+</div>
 	 		<div class="right">
 	 			<div>
-	 				Semua Produk Amonia
+	 				Daftar Produk Saya
 	 				<hr class="garis-hr">
 	 				<div class="w3-row-padding" style="margin: 20px 0px;">
+<?php
+
+if ($numrows > 0) {
+?>	 		
 	 				<?php 
 						foreach ($query as $row) {
 					?>	
@@ -46,7 +51,10 @@ $query = mysqli_query($koneksi, $select);
 
 	 				<?php 
 	 					} 
-	 				?>
+} else {
+	echo "<center>Anda Belum Ada Produk</center>";
+}
+?>
 	 				</div>
 	 			</div>
 	 		</div>

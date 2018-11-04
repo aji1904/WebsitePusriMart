@@ -1,7 +1,7 @@
 * {font-family: Segoe UI;}
 body {margin: 0px; padding: 0px;}
 
-#navbar {width: 100%; background-color: #4CAF50; height: auto; padding: 10px; position: fixed; z-index: 9999; }
+#navbar {width: 100%; background-color: #4CAF50; height: auto; padding: 10px; position: fixed; z-index: 5; }
 .logo {font-size: 20px; color: white; padding: 0px 20px 0px 20px; }
 .search {border: none; padding: 7px 15px; border-radius: 5px 0px 0px 5px; width: 520px; margin-left: 25px; }
 .login {border-radius: 5px; padding: 5px; width: 80px; background-color: white; border: none; cursor: pointer; position: absolute; left: 1150px; top: 13px;}
@@ -23,7 +23,7 @@ a {text-decoration: none; }
 .dropdown-space {margin: auto 25px;}
 .space-dropdown {margin-left: 15px;}
 .card {background-color: white; color: black; padding: 10px 5px 5px 10px; max-height: 127px; height: 127px;}
-.position-image {max-width: 200px; max-height: 200px; display: block; margin: auto; }
+.position-image {max-width: 200px; max-height: 200px; display: block; margin: auto; vertical-align: middle; height: 100%; }
 .size-image {width: auto; height: 200px;}
 .height-card {height: 327px; max-height: 327px;}
 .font-height {max-height: 65px; height: 65px;}
@@ -53,3 +53,4 @@ a {text-decoration: none; }
 .stok {border: 1px solid #e0e0e0; width: 25%; text-align: center; margin-top: 20px;border-radius: 10px; }
 .total-buy {font-size: 20px; margin-bottom: 20px; background-color: #4CAF50; padding: 5px; border-radius: 10px; color: white; }
 .form-total {padding: 10px;}
+.flex-container {top: 10px; width:98%; float: right; display: flex; justify-content: flex-end; position: absolute;z-index: -1}

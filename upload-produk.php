@@ -7,9 +7,9 @@
     	<center><font size="5">Upload Produk</font></center>
     </div>	
 	    <div>	
-	    	<form class="w3-container" method="post" action="/WebsitePusriMart/backend/upload.php" style="margin: 0px 10px;">
+	    	<form class="w3-container" method="post" action="/WebsitePusriMart/backend/upload.php" style="margin: 0px 10px;" enctype="multipart/form-data" >
 	    			
-	    			<input class="w3-input daftar-input" type="file" name="image" multiple accept="image/*" required placeholder="Upload Image">
+	    			<input class="w3-input daftar-input" type="file" name="image"  accept="image/*" multiple required placeholder="Upload Image">
 					<input class="w3-input daftar-input" type="text" name="nama_produk" required placeholder="Judul Produk"> 
 					<input class="w3-input daftar-input" type="text" name="harga" required placeholder="Harga Produk"> 
 					<input class="w3-input daftar-input" type="text" name="jmlh_produk" required placeholder="Banyak Produk">
@@ -53,7 +53,7 @@
 						</select>
 					</div>
 					<div class="padding-select">
-						<input class="w3-input daftar-input" type="text" name="kabupaten_kota" required placeholder="Kota/Kabupaten"> 
+						<input class="w3-input daftar-input" type="text" name="kabupaten_kota" required placeholder="Kota/Kabupaten" style="text-transform: uppercase;"> 
 					</div>
 					<div class="padding-select">
 						<select class="style-select" style="height: 35px;" name="kategori">
