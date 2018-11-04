@@ -1,7 +1,7 @@
 # WebsitePusriMart
 please help me 
 
-fitur search = belum;
+fitur search = solved;
 fitur cari lokasi = belum;
 fitur lihat, edit, delete pada produk = belum;
 fitur transaksi produk = belum;
