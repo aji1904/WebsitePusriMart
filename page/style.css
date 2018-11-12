@@ -34,7 +34,7 @@ a {text-decoration: none; }
 .group-detail {height: auto; margin: 15px 0px;}
 .group-form {padding: 15px; background-color: #e0e0e0;}
 .row-detail {background-color: white; padding: 20px;}
-#image-detail {border: 1px solid green; border-radius: 5px; width: 270px; height: 270px;background-color: white;}
+#image-detail {border: 1px solid green; border-radius: 5px; width: 270px; height: 310px;background-color: white;}
 .image-size {height: auto; max-width: 330px;}
 .margin-half{margin-left: 50px;}
 .font-title {font-size: 25px; padding-bottom: 15px;}
@@ -50,7 +50,10 @@ a {text-decoration: none; }
 .btn-buy {width: 240px; max-width: 240px; border-radius: 5px; cursor: pointer; border: none; background-color: #4CAF50; padding: 10px 10px;}
 .container-buy {width: 44%; margin: auto; border-radius: 5px; border: 1px solid #e0e0e0; padding: 20px; position: absolute; top: 25%; left: 28%; box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);}
 .font-buy {font-size: 20px; padding: 20px; margin-bottom: 20px;}
-.stok {border: 1px solid #e0e0e0; width: 25%; text-align: center; margin-top: 20px;border-radius: 10px; }
+.stok {border: 1px solid #e0e0e0; width: 25%; text-align: center; margin-top: 20px;border-radius: 10px;}
 .total-buy {font-size: 20px; margin-bottom: 20px; background-color: #4CAF50; padding: 5px; border-radius: 10px; color: white; }
 .form-total {padding: 10px;}
 .flex-container {top: 10px; width:98%; float: right; display: flex; justify-content: flex-end; position: absolute;z-index: -1}
+.profile-list {margin: 10px auto; padding: 10px;}
+.button-edit {margin: 10px auto; padding: 10px;}
+.margin-edit {margin-right: 50px;}

@@ -5,7 +5,7 @@
 	 		</div>
 	 		<div class="right">
 	 			<div>
-	 				Detail UREA Retail
+	 				Detail Produk
 	 				<hr class="garis-hr">
 	 				<div class="group-detail">
 	 					<div class="group-form">
@@ -41,7 +41,6 @@
 
 		 					<div class="detail-produk">
 		 						<button class="button-detail">Detail Produk</button>
-		 						<button class="button-detail">Tanya Penjual</button>
 		 						<hr class="garis-hr">
 		 						<div style="width: 100%;">
 		 							<pre style="font-family: segoe ui; margin:0px; padding: 10px;">

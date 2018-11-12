@@ -39,7 +39,7 @@
 							  </div>
 
 							<a href='/WebsitePusriMart/backend/logout.php' class='w3-btn w3-orange w3-round' style='margin-right: 8px; margin-left: 8px;'>Logout</a>
-							<a href='/WebsitePusriMart/' class='w3-btn w3-orange w3-round'><i class='fa fa-shopping-cart'></i></a>
+							<a href='/WebsitePusriMart/keranjang.php' class='w3-btn w3-orange w3-round'><i class='fa fa-shopping-cart'></i></a>
 						</div>"
 					);
 				} else {
