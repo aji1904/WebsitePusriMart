@@ -9,7 +9,7 @@
 	    <div>	
 	    	<form class="w3-container" method="post" action="/WebsitePusriMart/backend/upload.php" style="margin: 0px 10px;" enctype="multipart/form-data" >
 	    			
-	    			<input class="w3-input daftar-input" type="file" name="image"  accept="image/*" multiple required placeholder="Upload Image">
+	    			<input class="w3-input daftar-input" type="file" name="foto-produk"  accept="image/*" multiple required placeholder="Upload Image">
 					<input class="w3-input daftar-input" type="text" name="nama_produk" required placeholder="Judul Produk"> 
 					<input class="w3-input daftar-input" type="text" name="harga" required placeholder="Harga Produk"> 
 					<input class="w3-input daftar-input" type="text" name="jmlh_produk" required placeholder="Banyak Produk">
@@ -68,21 +68,21 @@
 					<div class="padding-select">
 						<select class="style-select" style="height: 35px;" name="jenis_produk">
 							<option selected>-- Pilih Jenis Produk Anda --</option>
-						    <option value="urea-retail">UREA Retail</option>
-						    <option value="npk-retail">NPK Retail</option>
-						    <option value="benih-padi">Benih Padi PUSRI SEED</option>
-						    <option value="benih-cabai">Benih Cabai PUSRI SEED</option>
-						    <option value="benih-jagung">Benih Jagung Hibrida PUSRI SEED</option>
-						    <option value="dekomposer">Dekomposer Cair SRIDEK</option>
-						    <option value="pupuk-bfatalik">Pupuk Cair B-FITALIK</option>
-						    <option value="beropestisida">Beopestisida B-VERIN</option>
-						    <option value="pupuk-bioripah">Pupuk Hayati BIORIPAH</option>
-						    <option value="pusri-organikcair">PUSRI Organik Cair</option>
-						    <option value="pusri-hydro">PUSRI Hydro</option>
-						    <option value="nutremag">Nutremag</option>
-						    <option value="urea">UREA</option>
-						    <option value="amonia">Amonia</option>
-						    <option value="npk-fusion">NPK-Fusion</option>
+						    <option value="urea-retail">UREA Retail (Produk Retail)</option>
+						    <option value="npk-retail">NPK Retail (Produk Retail)</option>
+						    <option value="benih-padi">Benih Padi PUSRI SEED (Produk Inovasi)</option>
+						    <option value="benih-cabai">Benih Cabai PUSRI SEED (Produk Inovasi)</option>
+						    <option value="benih-jagung">Benih Jagung Hibrida PUSRI SEED (Produk Inovasi)</option>
+						    <option value="dekomposer">Dekomposer Cair SRIDEK (Produk Inovasi)</option>
+						    <option value="pupuk-bfatalik">Pupuk Cair B-FITALIK (Produk Inovasi)</option>
+						    <option value="beropestisida">Beopestisida B-VERIN (Produk Inovasi)</option>
+						    <option value="pupuk-bioripah">Pupuk Hayati BIORIPAH (Produk Inovasi)</option>
+						    <option value="pusri-organikcair">PUSRI Organik Cair (Produk Inovasi)</option>
+						    <option value="pusri-hydro">PUSRI Hydro (Produk Inovasi)</option>
+						    <option value="nutremag">Nutremag (Produk Inovasi)</option>
+						    <option value="urea">UREA (Urea)</option>
+						    <option value="amonia">Amonia (Amonia)</option>
+						    <option value="npk-fusion">NPK-Fusion (NPK Fusion)</option>
 						</select>
 					</div>
 					
@@ -96,7 +96,7 @@
 
 					<div class="w3-center" style="padding: 20px 0px;"> 
 						<button type="submit" name="upload" class="w3-btn w3-green w3-round" style=" margin-right: 50px;">Upload</button>
-					<a href="index.php" class="w3-btn w3-green w3-round">
+					<a href="profile_penjual.php" class="w3-btn w3-green w3-round">
 					 Batal
 					</a>
 				</div>

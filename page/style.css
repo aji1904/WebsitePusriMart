@@ -1,13 +1,14 @@
 * {font-family: Segoe UI;}
 body {margin: 0px; padding: 0px;}
 
-#navbar {width: 100%; background-color: #4CAF50; height: auto; padding: 10px; position: fixed; z-index: 5; }
+#navbar {width: 100%; background-color: #4CAF50; height: auto; padding: 10px; position: fixed; z-index: 5;}
 .logo {font-size: 20px; color: white; padding: 0px 20px 0px 20px; }
 .search {border: none; padding: 7px 15px; border-radius: 5px 0px 0px 5px; width: 520px; margin-left: 25px; }
+.login-button {position: absolute;}
 .login {border-radius: 5px; padding: 5px; width: 80px; background-color: white; border: none; cursor: pointer; position: absolute; left: 1150px; top: 13px;}
 .daftar {border-radius: 5px; padding: 5px; width: 80px; background-color: white; border: none; cursor: pointer; position: absolute; left: 1250px; top: 13px;}
 .icon {background-color: white; padding: 11px; margin: 0px;}
-.cari {background-color: transparent; border: none; cursor: pointer; padding: 0px;}
+.cari {background-color: transparent; border: none; cursor: pointer; padding: 0px; height: 36px;}
 ul {list-style-type: none; margin: 0; padding: 0;}
 li {padding: 3px 0px;}
 a {text-decoration: none; }
@@ -34,7 +35,7 @@ a {text-decoration: none; }
 .group-detail {height: auto; margin: 15px 0px;}
 .group-form {padding: 15px; background-color: #e0e0e0;}
 .row-detail {background-color: white; padding: 20px;}
-#image-detail {border: 1px solid green; border-radius: 5px; width: 270px; height: 310px;background-color: white;}
+#image-detail {width: 300px; height: 300px;background-color: white;}
 .image-size {height: auto; max-width: 330px;}
 .margin-half{margin-left: 50px;}
 .font-title {font-size: 25px; padding-bottom: 15px;}
@@ -50,10 +51,13 @@ a {text-decoration: none; }
 .btn-buy {width: 240px; max-width: 240px; border-radius: 5px; cursor: pointer; border: none; background-color: #4CAF50; padding: 10px 10px;}
 .container-buy {width: 44%; margin: auto; border-radius: 5px; border: 1px solid #e0e0e0; padding: 20px; position: absolute; top: 25%; left: 28%; box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);}
 .font-buy {font-size: 20px; padding: 20px; margin-bottom: 20px;}
-.stok {border: 1px solid #e0e0e0; width: 25%; text-align: center; margin-top: 20px;border-radius: 10px;}
+.stok {border: 1px solid #e0e0e0; width: 25%; text-align: center; margin-top: 15px;border-radius: 5px; padding: 8px;}
 .total-buy {font-size: 20px; margin-bottom: 20px; background-color: #4CAF50; padding: 5px; border-radius: 10px; color: white; }
 .form-total {padding: 10px;}
-.flex-container {top: 10px; width:98%; float: right; display: flex; justify-content: flex-end; position: absolute;z-index: -1}
+.flex-container {top: 10px; width:98%; float: right; position: absolute; left: 85%;}
 .profile-list {margin: 10px auto; padding: 10px;}
 .button-edit {margin: 10px auto; padding: 10px;}
 .margin-edit {margin-right: 50px;}
+.right-detail {width: 95%; margin: 0 auto;}
+.padding-detail {padding-top: 80px;}
+.size-icon {font-size: 1.5rem; color: white;background-color: orange;border-radius: 50%; width: 50px; height: 50px; padding: 14px;}

@@ -1,6 +1,6 @@
 <?php include './page/header.php'; ?> 
 <?php 
-$
+
 ?>
 <body>
  	<div class="w3-border card-daftar" >
@@ -17,7 +17,7 @@ $
 					<input class="w3-input daftar-input" type="text" name="name" required placeholder="Harga Produk"> 
 					<input class="w3-input daftar-input" type="text" name="no_hp" required placeholder="Banyak Produk">
 					<div class="padding-select">
-						<select class="style-select" size="5">
+						<select class="style-select" style="padding: 5px;">
 							<option selected>-- Pilih Provinsi Anda --</option>
 						    <option value="Aceh">Aceh</option>
 						    <option value="Bali">Bali</option>
@@ -70,7 +70,7 @@ $
 
 					<div class="w3-center" style="padding: 20px 0px;"> 
 						<button type="submit" name="login" class="w3-btn w3-green w3-round" style=" margin-right: 50px;">Update</button>
-					<a href="index.php" class="w3-btn w3-green w3-round">
+					<a href="profile_penjual.php" class="w3-btn w3-green w3-round">
 					 Batal
 					</a>
 				</div>

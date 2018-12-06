@@ -19,7 +19,7 @@ $update_produk = "update produk set  values ('$id_produk','$username','$nama_pro
 $query = mysqli_query($koneksi, $insert_produk);
 
 if ($query) {
-	header("Location: /WebsitePusriMart/");
+	header("Location: /WebsitePusriMart/profile_penjual.php");
 } else {
 	echo "Gagal" . mysqli_error($koneksi);
 }

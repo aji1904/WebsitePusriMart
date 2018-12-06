@@ -1,71 +1,80 @@
+<?php session_start();?>
 <?php include './page/header.php'; ?>
 <?php include './page/navbar.php'; ?>
-<?php include './page/left.php'; ?>
 
+<?php
+require_once "./backend/koneksi.php";
+
+$id = $_GET["id"];
+
+$select = "select * from produk where id_produk = '$id' ";
+$query = mysqli_query($koneksi, $select);
+
+?>
 	 		</div>
-	 		<div class="right">
-	 			<div>
-	 				Detail Produk
+	 		<div class="right-detail">
+	 			<div class="padding-detail">
+	 				<a href="index.php"><i class="fas fa-arrow-left size-icon"></i></a>
+	 				<center><h5>Detail Produk</h5></center>
 	 				<hr class="garis-hr">
 	 				<div class="group-detail">
+	 					<?php 
+							foreach ($query as $row) {
+						?>
 	 					<div class="group-form">
 		 					<div class="w3-row row-detail">
 		 						<div class="w3-half" id="image-detail">
-		 							<img src="./image/urea-retail.png" class="image-size">
+		 							<img src="<?= $row['path_image'];?>" style="width: 300px; height: 300px; border-radius: 10px;">
 		 						</div>
+		 						<form method="POST" action="pembayaran.php">
 		 						<div class="w3-half margin-half">
-		 							<div class="font-title">Pupuk UREA Retail ukuran 1 KG,2 KG,10 KG,25 KG, 50 KG </div>
-		 							<div class="font-harga">Rp. 200.000</div>
+		 							<div class="font-title"><?php echo $row["nama_produk"]; ?></div>
+		 							<div class="font-harga">Rp. <?php echo $row["harga"]; ?></div>
 		 							<div>
 		 								<div>
-			 								<select class="stok">
-			 									<option value="1 unit">1 Unit</option>
-			 									<option value="2 unit">2 Unit</option>
-			 									<option value="3 unit">3 Unit</option>
-			 									<option value="4 unit">4 Unit</option>
-			 									<option value="5 unit">5 Unit</option>
-			 									<option value="6 unit">6 Unit</option>
-			 									<option value="7 unit">7 Unit</option>
-			 									<option value="8 unit">8 Unit</option>
-			 									<option value="9 unit">9 Unit</option>
-			 									<option value="10 unit">10 Unit</option>
+		 									<input type="hidden" name="id" value="<?= $row['id_produk'] ?>" />
+		 									<input type="hidden" name="jumlah_stok" value="<?= $row['jmlh_produk'] ?>" />
+		 									<input type="hidden" name="nama_produk" value="<?php echo $row["nama_produk"]; ?>" />
+		 									<input type="hidden" name="harga" value="<?php echo $row["harga"]; ?>" />
+			 								<select class="stok" name="stok" style="width: 200px;">
+			 									<option value="1">1 Unit</option>
+			 									<option value="2">2 Unit</option>
+			 									<option value="3">3 Unit</option>
+			 									<option value="4">4 Unit</option>
+			 									<option value="5">5 Unit</option>
+			 									<option value="6">6 Unit</option>
+			 									<option value="7">7 Unit</option>
+			 									<option value="8">8 Unit</option>
+			 									<option value="9">9 Unit</option>
+			 									<option value="10">10 Unit</option>
 			 								</select>
 		 								</div>
-		 								<div class="stok">
-		 									STOK 100
+		 								<div class="stok" style="width: 200px;">
+		 									STOK <?php echo $row["jmlh_produk"]; ?>
 		 								</div>
 		 							</div>
-		 							<button class="beli-now">Beli Sekarang</button>
+		 							
+		 								<button type="submit" name="beli" class="beli-now" style="width: 200px;">Beli Sekarang</button>
 		 						</div>
+		 						</form>
 		 					</div>
 
 		 					<div class="detail-produk">
 		 						<button class="button-detail">Detail Produk</button>
 		 						<hr class="garis-hr">
-		 						<div style="width: 100%;">
-		 							<pre style="font-family: segoe ui; margin:0px; padding: 10px;">
-		Spesifikasi
-	Nitrogen  : 46 %
-	Kadar Air : 0,5%
-	Biuret : Maks 1 %
-	Bentuk : Prill 1 - 3,35mm 90 % Min
-	Standard : SNI No. 2801 : 2010
-	 
-
-	Manfaat :
-	1. Pertumbuhan akar, batang dan daun tanaman menjadi optimal (tanaman akan lebih cepat tinggi, jumlah anakan banyak & memiliki cabang yang banyak)
-	2. Membuat daun tanaman menjadi hijau segar serta memperkuat akar dan batang tanaman.
-	3. Meningkatkan aktivitas organisme dalam tanah penyebab kesuburan.
-	4.  Menambah kandungan protein dalam tanaman
-	5. Digunakan untuk semua jenis tanaman baik tanaman pangan, hortikultura & Perkebunan.
-		 							</pre>
+		 						<div style="width: 100%; margin:0px; padding: 10px;">
+		 							<?php echo nl2br($row["desc_produk"]); ?>
 		 						</div>
 		 					</div>
 		 					
 	 					</div>
 	 				</div>
+			 		<?php 
+						} 
+					?>
 	 			</div>
 	 		</div>
+
 	 	</div>
 	 </div>
 </body>
