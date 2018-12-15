@@ -5,7 +5,7 @@
 
 <?php
 require_once "./backend/koneksi.php";
-$Susername = $_SESSION['username'];
+$Susername = $_SESSION['user_penjual'];
 
 $select = "select * from produk where username = '$Susername' ";
 $query = mysqli_query($koneksi, $select);
@@ -24,11 +24,11 @@ $numrows = mysqli_num_rows($query);
 									<div class="w3-quarter">
 										<a href="detail-produk.php?id=<?= $row["id_produk"] ?>">
 
-			 							<div class="w3-card w3-container w3-margin-bottom w3-round w3-green height-card" style="padding: 0px;">
+			 							<div class="w3-card w3-container w3-margin-bottom w3-round height-card-penjual" style="padding: 0px;">
 			 							<div class="size-image">
 			 								<img src="<?= $row['path_image'];?>" alt="BELUM_ADA" class="position-image">
 			 							</div>
-			 							<div class="card">
+			 							<div class="card" style="height: 180px;">
 											<div class="font-height container-text">
 			 									<p style="margin: 0px;">
 			 										<b><?php echo $row["nama_produk"]; ?></b> 
@@ -37,6 +37,10 @@ $numrows = mysqli_num_rows($query);
 			 								<div style="color: red; font-size: 14px;">Rp. <?php echo $row["harga"]; ?></div>
 			 								<div style="font-size: 13px;"><?php echo $row["provinsi"]; ?></div>
 			 								<div style="font-size: 13px;"><?php echo $row["kabupaten_kota"]; ?></div>
+			 								<div style="margin-top: 20px;">
+			 								<a class="beli-now" href="update-produk.php?id=<?= $row["id_produk"] ?>">Edit</a>
+			 								<a class="beli-now" href="./backend/delete.php?id=<?= $row["id_produk"] ?>">Hapus</a>
+			 								</div>
 			 							</div>
 			 						</div>
 			 						</a>

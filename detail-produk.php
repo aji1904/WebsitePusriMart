@@ -14,7 +14,6 @@ $query = mysqli_query($koneksi, $select);
 	 		</div>
 	 		<div class="right-detail">
 	 			<div class="padding-detail">
-	 				<a href="index.php"><i class="fas fa-arrow-left size-icon"></i></a>
 	 				<center><h5>Detail Produk</h5></center>
 	 				<hr class="garis-hr">
 	 				<div class="group-detail">
@@ -32,6 +31,7 @@ $query = mysqli_query($koneksi, $select);
 		 							<div class="font-harga">Rp. <?php echo $row["harga"]; ?></div>
 		 							<div>
 		 								<div>
+		 									<input type="hidden" name="penjual" value="<?= $row['username'] ?>" />
 		 									<input type="hidden" name="id" value="<?= $row['id_produk'] ?>" />
 		 									<input type="hidden" name="jumlah_stok" value="<?= $row['jmlh_produk'] ?>" />
 		 									<input type="hidden" name="nama_produk" value="<?php echo $row["nama_produk"]; ?>" />

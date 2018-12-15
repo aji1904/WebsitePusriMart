@@ -3,7 +3,7 @@ error_reporting(0);
 require_once 'koneksi.php';
 session_start();
 
-$sessionUsername = $_SESSION['username'];
+$sessionUsername = $_SESSION['user_penjual'];
 
 if(isset($sessionUsername)) {
     header("Location: /WebsitePusriMart/profile_penjual.php");
@@ -19,7 +19,7 @@ $qSelect = mysqli_query($koneksi , $sqlSelect);
 $numRows = mysqli_num_rows($qSelect);
 
 if($numRows == 1) {
-    $_SESSION['username'] = $username;
+    $_SESSION['user_penjual'] = $username;
     header("Location: /WebsitePusriMart/profile_penjual.php");
     die();
 } else

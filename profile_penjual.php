@@ -1,8 +1,18 @@
-<?php session_start();?>
-<?php error_reporting(0); ?>
-<?php include './page/header.php'; ?>
-<?php include './page/navbar_penjual.php'; ?>
-<?php include './page/left_penjual.php'; ?>
+<?php 
+	session_start();
+	
+	$Susername = $_SESSION['user_penjual'];
+	if (!isset($Susername)) {
+		header("location: login_penjual.php");
+		die();
+	}
+?>
+<?php 
+error_reporting(0); 
+include './page/header.php';
+include './page/navbar_penjual.php'; 
+include './page/left_penjual.php'; 
+?>
 
 	 		</div>
 	 		<div class="right">
@@ -12,7 +22,6 @@
 					 <div class="w3-row-padding" style="margin: 20px 0px;">
 					 <?php
 						require_once "./backend/koneksi.php";
-						$Susername = $_SESSION['username'];
 
 						$select = "select * from penjual where user_penjual = '$Susername' ";
 						$query = mysqli_query($koneksi, $select);
@@ -37,8 +46,7 @@
 							</table>							
 						</div>
 						<div class="button-edit">
-							<a href="edit.php" class="w3-btn w3-green w3-round margin-edit">Ubah</a>
-							<a href="index.php" class="w3-btn w3-green w3-round">Kembali</a>
+							<a href="edit-penjual.php" class="w3-btn w3-green w3-round margin-edit">Ubah</a>
 						</div>
 
 						<?php 

@@ -39,7 +39,7 @@ class File extends Image{
       return $this->successPath;
     }
 
-    public function upload($files = [], $width = 500, $height = 500){
+    public function upload($files = [], $width = 200, $height = 220){
       foreach ($files as $key => $file) {
         $name = strtolower($file['name']);
         $error = $file['error'];

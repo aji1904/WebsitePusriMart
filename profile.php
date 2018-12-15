@@ -1,4 +1,13 @@
-<?php session_start();?>
+<?php 
+	session_start();
+	
+	$Susername = $_SESSION['username'];
+	if (!isset($Susername)) {
+		header("location: login.php");
+		die();
+	}
+?>
+
 <?php include './page/header.php'; ?>
 <?php include './page/navbar.php'; ?>
 <?php include './page/left.php'; ?>
@@ -11,7 +20,6 @@
 					 <div class="w3-row-padding" style="margin: 20px 0px;">
 					 <?php
 						require_once "./backend/koneksi.php";
-						$Susername = $_SESSION['username'];
 
 						$select = "select * from user where username = '$Susername' ";
 						$query = mysqli_query($koneksi, $select);
@@ -22,8 +30,8 @@
 						<div class="profile-list">
 							<table class="w3-table">
 							<tr>
-							  <th>Username</th>
-							  <th>:</th>
+							  <th style="width: 200px;">Username</th>
+							  <th style="width: 20px;">:</th>
 							  <th><?php echo $row['username']; ?></th>
 							</tr>
 							<tr>
@@ -60,7 +68,6 @@
 						?>
 						<div class="button-edit">
 							<a href="edit.php" class="w3-btn w3-green w3-round margin-edit">Ubah</a>
-							<a href="index.php" class="w3-btn w3-green w3-round">Kembali</a>
 						</div>
 	 				</div>
 	 			</div>

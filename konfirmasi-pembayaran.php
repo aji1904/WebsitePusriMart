@@ -1,17 +1,23 @@
-<?php include './page/header.php'; ?>
-<?php require_once './backend/koneksi.php'; ?>
-<?php require_once './backend/init.php'; ?> 
+<?php 
+error_reporting(0);
+include 'page/header.php';
+require_once 'backend/koneksi.php';
+require_once 'backend/init.php'; 
+?> 
 <?php 
 
 if(isset($_POST['konfirmasi'])){
 	$jmlh_stok = (int) $_GET['jmlh'];
 	$stok = (int) $_GET['stok'];
 	$id = $_GET['id'];
+	$id_transaksi = uniqid();
 	$foto =$_FILES['foto'];
+	$alamat = $_POST['alamat'];
 	$tanggal = date("l, d-m-Y  h:i:sa");
 	$session = $_SESSION['username'];
 
-	$file = (new File('../'))->setPath('image/');
+
+	$file = (new File('./'))->setPath('image/konfirmasi/');
 	$upload_image = $file->upload([$id => $foto]);
 
 	$updatestok = $jmlh_stok-$stok;
@@ -20,7 +26,7 @@ if(isset($_POST['konfirmasi'])){
 		$pathImage = $upload_image->getSuccessPath();
 		$foto_confirm = mysqli_real_escape_string($koneksi, $pathImage[$id]);
 
-		$query_update = "UPDATE produk, user SET produk.jmlh_produk = '".$updatestok."', user.tanggal_beli = '".$tanggal."', user.confirm_image = '".$foto_confirm."' WHERE produk.id_produk = '".$id."' AND user.username = '".$session."' ";
+		$query_update = "UPDATE produk, transaksi SET produk.jmlh_produk = '".$updatestok."', transaksi.tanggal_transaksi = '".$tanggal."', transaksi.confirm_image = '".$foto_confirm."' WHERE produk.id_produk = '".$id."' AND transaksi.id_produk = '".$id."' ";
 		
 		$update_data = mysqli_query($koneksi, $query_update);
 		if ($query_update) {
@@ -32,7 +38,6 @@ if(isset($_POST['konfirmasi'])){
 		foreach ($upload->getErrors() as $errer) {
 			echo $error;
 		}
-		die();
 	}
 	
 }

@@ -1,5 +1,19 @@
-<?php include './page/header.php'; ?> 
 <?php 
+session_start();
+include './page/header.php';
+$Susername = $_SESSION['user_penjual'];
+if (!isset($Susername)) {
+	header("location: login_penjual.php");
+	die();
+}
+require_once "./backend/koneksi.php";
+$id = $_GET['id'];
+$select = "select * from produk where id_produk = '$id' ";
+$query = mysqli_query($koneksi, $select);
+$numrows = mysqli_num_rows($query);
+
+if ($numrows == 1) {
+	foreach ($query as $row) {
 
 ?>
 <body>
@@ -10,66 +24,21 @@
     	<center><font size="5">Update Produk</font></center>
     </div>	
 	    <div>	
-	    	<form class="w3-container" method="post" action="/WebsitePusriMart/backend/daftar.php" style="margin: 0px 10px;">
-	    			
-	    			<input class="w3-input daftar-input" type="file" name="image" multiple accept="image/*" required placeholder="Upload Image">
-					<input class="w3-input daftar-input" type="text" name="username" required placeholder="Judul Produk"> 
-					<input class="w3-input daftar-input" type="text" name="name" required placeholder="Harga Produk"> 
-					<input class="w3-input daftar-input" type="text" name="no_hp" required placeholder="Banyak Produk">
-					<div class="padding-select">
-						<select class="style-select" style="padding: 5px;">
-							<option selected>-- Pilih Provinsi Anda --</option>
-						    <option value="Aceh">Aceh</option>
-						    <option value="Bali">Bali</option>
-						    <option value="Banten">Banten</option>
-						    <option value="Bengkulu">Bengkulu</option>
-						    <option value="Gorontalo">Gorontalo</option>
-						    <option value="Jakarta">Jakarta</option>
-						    <option value="Jambi">Jambi</option>
-						    <option value="Jawa Barat">Jawa Barat</option>
-						    <option value="Jawa Tengah">Jawa Tengah
-						    <option value="Jawa Timur">Jawa Timur</option>
-						    <option value="Kalimantan Barat">Kalimantan Barat</option>
-						    <option value="Kalimantan Selatan">Kalimantan Selatan</option>
-						    <option value="Kalimantan Tengah">Kalimantan Tengah</option>
-						    <option value="Kalimantan Timur">Kalimantan Timur</option>
-						    <option value="Kalimantan Utara">Kalimantan Utara</option>
-						    <option value="Kepulauan Bangka Belitung">Kepulauan Bangka Belitung</option>
-						    <option value="Kepulauan Riau">Kepulauan Riau</option>
-						    <option value="Lampung">Lampung</option>
-						    <option value="Maluku">Maluku </option>
-						    <option value="Maluku Utara">Maluku Utara</option>
-						    <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
-						    <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
-						    <option value="Papua">Papua</option>
-						    <option value="Papua Barat">Papua Barat</option>
-						    <option value="Riau">Riau</option>
-						    <option value="Sulawesi Barat">Sulawesi Barat</option>
-						    <option value="Sulawesi Selatan">Sulawesi Selatan</option>
-						    <option value="Sulawesi Tengah">Sulawesi Tengah</option>
-						    <option value="Sulawesi Tenggara">Sulawesi Tenggara</option>
-						    <option value="Sulawesi Utara">Sulawesi Utara</option>
-						    <option value="Sumatera Barat">Sumatera Barat</option>
-						    <option value="Sumatera Selatan">Sumatera Selatan</option>
-						    <option value="Sumatera Utara">Sumatera Utara</option>
-						    <option value="Yogyakarta">Yogyakarta</option>
-						</select>
-					</div>
-					<div class="padding-select">
-						<input class="w3-input daftar-input" type="text" name="kota/kabupaten" required placeholder="Kota/Kabupaten"> 
-					</div>
-					
-					
+	    	<form class="w3-container" method="post" action="/WebsitePusriMart/backend/update.php" style="margin: 0px 10px;" enctype="multipart/form-data">
+	    			<input type="hidden" name="id" value="<?= $id?>">
+					<input class="w3-input daftar-input" type="text" name="judul" value="<?= $row['nama_produk']?>" required placeholder="Judul Produk"> 
+					<input class="w3-input daftar-input" type="text" name="harga" value="<?= $row['harga']?>" required placeholder="Harga Produk"> 
+					<input class="w3-input daftar-input" type="text" name="banyak" value="<?= $row['jmlh_produk']?>" required placeholder="Banyak Produk">
+				
 					<label>Deskripsi Barang Anda</label>
 					<div style="padding: 10px; margin-bottom: 20px;">
 						<!-- deskripsi produk -->
-						<textarea name="desc_produk" class="desc-produk"> 
-								
+						<textarea name="desc_produk" class="desc-produk" ><?php echo $row['desc_produk']; ?>
 						</textarea>
 					</div>
 
 					<div class="w3-center" style="padding: 20px 0px;"> 
-						<button type="submit" name="login" class="w3-btn w3-green w3-round" style=" margin-right: 50px;">Update</button>
+						<button type="submit" name="update" class="w3-btn w3-green w3-round" style=" margin-right: 50px;">Update</button>
 					<a href="profile_penjual.php" class="w3-btn w3-green w3-round">
 					 Batal
 					</a>
@@ -79,3 +48,10 @@
 	    </div>
 </body>
 </html>
+<?php 
+	} 
+} else {
+	echo "<center>Anda Belum Ada Produk</center>";
+}
+
+?>

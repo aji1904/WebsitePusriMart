@@ -4,7 +4,8 @@
 <?php include './page/left.php'; ?>
 
 <?php
-require_once "./backend/koneksi.php";
+error_reporting(0);
+require_once './backend/koneksi.php';
 
 $select = "select * from produk ";
 $query = mysqli_query($koneksi, $select);

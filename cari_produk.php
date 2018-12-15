@@ -30,7 +30,7 @@ $numrows = mysqli_num_rows($query);
 							<a href="detail-produk.php?id=<?= $row["id_produk"] ?>">
  							<div class="w3-card w3-container w3-margin-bottom w3-round w3-green height-card" style="padding: 0px;">
  							<div class="size-image">
- 								<img src="./image/produk1.png" alt="BELUM_ADA" class="position-image">
+ 								<img src="<?= $row['path_image']?>" alt="BELUM_ADA" class="position-image">
  							</div>
  							<div class="card">
 								<div class="font-height container-text">

@@ -1,33 +1,81 @@
-<?php include './page/header.php'; ?> 
-<body>
- 	<div class="w3-border card-daftar" >
-
+<?php 
+	session_start();
 	
-    <div style="padding-top: 20px;">
-    	<center><font size="5">Ubah Profile Anda</font></center>
-    </div>	
-	    <div>	
-	    	<form class="w3-container" method="post" action="/WebsitePusriMart/backend/daftar.php" style="margin: 0px 10px;">
-					<input class="w3-input daftar-input" type="text" name="username" required placeholder="Username"> 
-					<input class="w3-input daftar-input" type="text" name="name" required placeholder="Your Name"> 
-					<input class="w3-input daftar-input" type="text" name="no_hp" required placeholder="No hp"> 
-					<input class="w3-input daftar-input" type="text" name="email" required placeholder="Your Email">
-					<label>Jenis Kelamin</label>
-					<div style="padding: 10px; margin-bottom: 20px;">
-						<input type="radio" name="gender" value="Laki-Laki" style="margin-right: 10px;">Laki-Laki
-						<input type="radio" name="gender" value="Perempuan" style="margin: 0 10px 0 20px;">Perempuan
-					</div>
-					<label>Tanggal Lahir</label>					
-						<input type="date"  name="lahir" class="w3-input daftar-input" style="margin: 0px;" >
+	$Susername = $_SESSION['username'];
+	if (!isset($Susername)) {
+		header("location: login.php");
+		die();
+	}
+?>
 
-					<div class="w3-center" style="padding: 20px 0px;"> 
-						<button type="submit" name="edit" class="w3-btn w3-green w3-round" style=" margin-right: 50px;">Simpan</button>
-					<a href="profile.php" class="w3-btn w3-green w3-round">
-					 Batal
-					</a>
-				</div>
-			</form>
-			</div> 
-	    </div>
+<?php include './page/header.php'; ?>
+<?php include './page/navbar.php'; ?>
+<?php include './page/left.php'; ?>
+
+	 		</div>
+	 		<div class="right">
+	 			<div>
+	 				EDIT PROFILE
+	 				<hr class="garis-hr">
+					 <div class="w3-row-padding" style="margin: 20px 0px;">
+					 <?php
+						require_once "./backend/koneksi.php";
+
+						$select = "select * from user where username = '$Susername' ";
+						$query = mysqli_query($koneksi, $select);
+						$numrows = mysqli_num_rows($query);
+						if ($numrows == 1) {
+							foreach ($query as $row) { ?>
+
+						<div class="profile-list">
+						<form method="POST" action="./backend/update-response.php">
+							<table class="w3-table">
+							<tr>
+							  <th style="width: 200px;">Username</th>
+							  <th style="width: 20px;">:</th>
+							  <th><?php echo $row['username']; ?></th>
+							</tr>
+							<tr>
+							  <th>Nama</th>
+							  <th>:</th>
+							  <th><input type="text" name="nama" value="<?php echo $row['name']; ?>"></th>
+							</tr>
+							<tr>
+							  <th>Email</th>
+							  <th>:</th>
+							  <th><input type="text" name="email" value="<?php echo $row['email']; ?>"></th>
+							</tr>
+							<tr>
+							  <th>lahir</th>
+							  <th>:</th>
+							  <th><input type="text" name="lahir" value="<?php echo $row['lahir']; ?>"></th>
+							</tr>
+							<tr>
+							  <th>no_hp</th>
+							  <th>:</th>
+							  <th><input type="text" name="no_hp" value="<?php echo $row['no_hp']; ?>"></th>
+							</tr>
+							<tr>
+							  <th>Jenis Kelamin</th>
+							  <th>:</th>
+							  <th><input type="text" name="gender" value="<?php echo $row['gender']; ?>"></th>
+							</tr>
+							</table>
+						</div>
+
+						<?php 
+							}
+						}
+						?>
+						<div class="button-edit">
+							<button type="submit" class="w3-btn w3-green w3-round margin-edit" name="simpan">Simpan</button>
+						</div>
+	 				</div>
+	 			</form>
+	 			</div>
+	 		</div>
+	 	</div>
+	 </div>
 </body>
 </html>
+ 

@@ -10,7 +10,7 @@ if (isset($sessionUsername)) {
 
 ?>
 <body>
-	<div class="container-buy" style="top: 22%;">
+	<div class="container-buy" style="top: 15%;">
 		<div class="total-buy">
 			<center>Total Yang anda Bayar</center>
 		</div>
@@ -21,9 +21,10 @@ if (isset($sessionUsername)) {
 			Nama Barang : <?= $_POST['nama_produk'] ?><br>
 			Harga Barang : Rp <?= $_POST['harga'] ?><br>
 			Unit Barang : <?= $_POST['stok'] ?> Unit<br>
-			Total : Rp <?= (int) $_POST['stok']*(int) $_POST['harga'] ?>
-		</div>
-		<center><a href="konfirmasi-pembayaran.php?stok=<?= $_POST['stok']?>&jmlh=<?= $_POST['jumlah_stok'] ?>&id=<?= $_POST['id'] ?>"><button class="beli-now">Konfirmasi Pembayaran</button></a></center>
+			Total : Rp <?= (int) $_POST['stok']*(int) $_POST['harga'] ?><br><br>
+
+			</div>
+			<center><a href="form-beli.php?stok=<?= $_POST['stok']?>&jmlh=<?= $_POST['jumlah_stok'] ?>&id=<?= $_POST['id'] ?>&nama_produk=<?= $_POST['nama_produk'] ?>"><button class="beli-now">Lengkapi Data</button></a></center>
 	</div>
 </body>
 </html>

@@ -5,7 +5,7 @@ require_once 'init.php';
 
 if (isset($_POST['upload'])) {
 
-	$username = $_SESSION['username'];
+	$username = $_SESSION['user_penjual'];
 	$id_produk = "P_".uniqid();
 	$nama_produk = $_POST['nama_produk'];
 	$harga = $_POST['harga'];

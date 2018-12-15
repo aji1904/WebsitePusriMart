@@ -4,7 +4,7 @@
 foreach ($query as $row) {
 ?>
 <div class="w3-quarter">
-	<a href='detail-produk.php?id=<?= $row["id_produk"] ?>'>
+	<a href='detail-produk.php?id=<?= $row["id_produk"] ?>&?p=<?= $row["username"] ?>'>
 		<div class="w3-card w3-container w3-margin-bottom w3-round w3-green height-card" style="padding: 0px;">
 		<div class="size-image">
 			<img src="<?= $row["path_image"]?>" alt="BELUM_ADA" class="position-image">

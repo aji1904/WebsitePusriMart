@@ -7,7 +7,7 @@
 			    <button class="button provinsi " style="cursor: pointer;"><i class="fas fa-map-marker-alt" style="size: 20px; margin: 0px 5px;"></i> Pilih Lokasi<i class="fa fa-angle-down space-dropdown"></i></button>
 			    <div class="w3-dropdown-content w3-bar-block w3-border" style="width: 600px;">
 			    	<div class="w3-row">
-						<div class="w3-col s6 w3-center w3-green">
+						<div class="w3-col s6 w3-center">
 							  <a href="#" class="w3-bar-item w3-button">SEMUA</a>
 						      <a href="#" class="w3-bar-item w3-button">KANTOR PPD (JATENG)</a>
 						      <a href="#" class="w3-bar-item w3-button">WISMA 101 (JAKARTA)</a>
@@ -23,7 +23,7 @@
 						      <a href="#" class="w3-bar-item w3-button">GPP BANJARNEGARA (JATENG)</a>
 						      <a href="#" class="w3-bar-item w3-button">GPP PEKALONGAN (JATENG)</a>
 						</div>
-						<div class="w3-col s6 w3-center w3-green">
+						<div class="w3-col s6 w3-center">
 						      <a href="#" class="w3-bar-item w3-button">GPP PATI (JATENG)</a>
 							  <a href="#" class="w3-bar-item w3-button">GPP MAGELANG (JATENG)</a>
 						      <a href="#" class="w3-bar-item w3-button">KANTOR PPD (DIY)</a>
@@ -57,8 +57,8 @@
 							    <button class='w3-btn w3-orange w3-round' style='overflow:hidden; width: 100%;'>$sUsername</button>
 							    <div class='w3-dropdown-content w3-bar-block w3-border' style='padding : 8px 0px; width: 175px;'>
 							      <a href='profile.php' class='w3-bar-item w3-button'><i class='fa fa-user' style='padding-right: 10px;'></i>Profile Saya</a>
-							      <a href='/WebsitePusriMart/keranjang.php' class='w3-bar-item w3-button'><i class='fa fa-shopping-cart' style='padding-right: 10px;'></i>barang saya</a>
-							      <a href='/WebsitePusriMart/keranjang.php' class='w3-bar-item w3-button'><i class='fa fas fa-handshake' style='padding-right: 10px;'></i>Transaksi saya</a>
+							      <a href='/WebsitePusriMart/barang-saya.php' class='w3-bar-item w3-button'><i class='fa fa-shopping-cart' style='padding-right: 10px;'></i>barang saya</a>
+							      <a href='/WebsitePusriMart/transaksi-saya.php' class='w3-bar-item w3-button'><i class='fa fas fa-handshake' style='padding-right: 10px;'></i>Transaksi saya</a>
 							    </div>
 							  </div>
 

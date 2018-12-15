@@ -1,29 +1,24 @@
 <?php 
 require_once 'koneksi.php';
+require_once 'init.php';
 
-session_start();
 
-if (isset($_POST['upload'])) {
+if (isset($_POST['update'])) {
 
-$username = $_SESSION['username'];
-$id_produk = "P_".uniqid();
-$image = $_POST['image'];
-$nama_produk = $_POST['nama_produk'];
-$harga = $_POST['harga'];
-$jmlh_produk = $_POST['jmlh_produk'];
-$provinsi = $_POST['provinsi'];
-$kabupaten_kota = $_POST['kabupaten_kota'];
-$desc_produk = $_POST['desc_produk'];
+	$id = $_POST['id'];
+	$nama_produk = $_POST['judul'];
+	$harga = $_POST['harga'];
+	$jmlh_produk = $_POST['banyak'];
+	$desc_produk = $_POST['desc_produk'];
 
-$update_produk = "update produk set  values ('$id_produk','$username','$nama_produk','$harga','$jmlh_produk','$desc_produk','$provinsi','$kabupaten_kota')";
-$query = mysqli_query($koneksi, $insert_produk);
+	$insert_produk = "UPDATE produk SET nama_produk='$nama_produk', harga='$harga',jmlh_produk='$jmlh_produk', desc_produk='$desc_produk' WHERE id_produk ='$id' ";
 
-if ($query) {
-	header("Location: /WebsitePusriMart/profile_penjual.php");
-} else {
-	echo "Gagal" . mysqli_error($koneksi);
-}
-
+	$query = mysqli_query($koneksi, $insert_produk);
+	if ($query) {
+		header("Location: /WebsitePusriMart/produk_saya.php");
+	} else {
+		echo "Gagal" . mysqli_error($koneksi);
+	}
 	
 }else{
 	header("Location: /WebsitePusriMart/");
